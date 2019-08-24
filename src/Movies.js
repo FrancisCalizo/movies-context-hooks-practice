@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { MovieContext } from './MovieContext';
 
-const Movies = props => {
+const Movies = () => {
+  // use context hook
+  const [movies, setMovies] = useContext(MovieContext);
+
   return (
     <div>
-      {props.movies.map(movie => (
+      {movies.map(movie => (
         <div key={movie.id} className="movie">
           <h2>{movie.name}</h2>
           <p>{movie.date}</p>

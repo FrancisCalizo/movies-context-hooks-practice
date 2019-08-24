@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { MovieContext } from './MovieContext';
 
 const Nav = props => {
+  // use context hook
+  const [movies, setMovies] = useContext(MovieContext);
+
   return (
     <nav className="nav">
-      <div>
-        <h1>Movie List</h1>
-      </div>
-      <div>
-        <h1>Number of Movies: {props.movies.length}</h1>
-      </div>
+      <ul>
+        <li>Movies</li>
+        <li>Number of Movies: {movies.length}</li>
+      </ul>
     </nav>
   );
 };

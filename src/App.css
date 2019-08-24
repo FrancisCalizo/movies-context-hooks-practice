@@ -1,9 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  background: #dc3545;
+}
+
+ul {
+  list-style: none;
+}
+
 .movie {
   text-align: center;
 }
 
-.nav {
+.nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 1rem 10rem;
 }
